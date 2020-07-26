@@ -18,7 +18,7 @@ void BreathingLED::breathe() {
 void BreathingLED::loop() {
   switch(_currentState) {
     case BREATHING:
-      float val = (exp(sin(millis()/inhale*PI)) - 0.36787944)*PULSE;
+      float val = (exp(sin(millis()/INHALE*PI)) - 0.36787944)*PULSE;
       analogWrite(_LEDPin, PWMRANGE-val);
       break;
   }

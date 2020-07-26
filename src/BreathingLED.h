@@ -11,6 +11,9 @@
 #include "WProgram.h"
 #endif
 
+#define INHALE    3000    //Inhalation time in milliseconds.
+#define PULSE     PWMRANGE/(M_E-1/M_E)
+
 class BreathingLED {
 public:
   BreathingLED(int LEDPin);
